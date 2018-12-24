@@ -1,3 +1,10 @@
+# Neovim container
+# Using my dotfiles
+# Get plugins by dein
+#
+# Usage:
+#     $ docker run -it --rm -v `pwd`:/work -w /work u1and0/neovim
+
 FROM u1and0/archlinux:v0.4.0
 
 # Neovim install
