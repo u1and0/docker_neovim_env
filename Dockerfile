@@ -3,7 +3,13 @@
 # Get plugins by dein
 #
 # Usage:
-#     $ docker run -it --rm -v `pwd`:/work -w /work u1and0/neovim
+#    $ docker run -it --rm -v `pwd`:/work -w /work u1and0/neovim
+# Versions:
+#    v0.1.1
+#    521ee1e [rm] lynx no need
+#    v0.1.0
+#    0ce760a [add]cui browser install
+#    8cd8aa9 [add] docker neovim initial commit
 
 FROM u1and0/archlinux:v0.4.0
 
