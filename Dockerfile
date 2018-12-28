@@ -5,6 +5,8 @@
 # Usage:
 #    $ docker run -it --rm -v `pwd`:/work -w /work u1and0/neovim
 # Versions:
+#    v0.2.0
+#    a53a958 [add] ctags/gtags
 #    v0.1.1
 #    521ee1e [rm] lynx no need
 #    v0.1.0
