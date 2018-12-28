@@ -32,9 +32,21 @@ RUN echo ja_JP.UTF-8 UTF-8 > /etc/locale.gen &&\
 # Install CUI web browser
 RUN pacman -S --noconfirm w3m
 
+# Install ctags
+RUN pacman -S  --noconfirm ctags
+# Install gtags
+RUN pacman -S --noconfirm make gcc pygmentize &&\
+    cd /tmp &&\
+    curl -L http://tamacom.com/global/global-6.6.3.tar.gz | tar zx &&\
+    cd ./global-6.6.3 &&\
+    ./configure &&\
+    make &&\
+    make install &&\
+    rm -rf /tmp/global-6.6.3
+
 ENTRYPOINT ["/usr/bin/nvim"]
 
 LABEL maintainer="u1and0 <e01.ando60@gmail.com>"\
-      description="Neovim container. Using my dotfiles. Get plugins by dein."\
-      description.ja="neovimコンテナ。自分用dotfiles適用済み、deinによるプラグイン取得済み"\
-      version="neovim:v0.1.1"
+      description="Neovim container. Using my dotfiles. Get plugins by dein. ctags/gtags installed."\
+      description.ja="neovimコンテナ。自分用dotfiles適用, deinによるプラグイン取得, ctags/gtags導入"\
+      version="neovim:v0.2.0"
