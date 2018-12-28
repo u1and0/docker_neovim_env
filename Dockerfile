@@ -3,7 +3,13 @@
 # Get plugins by dein
 #
 # Usage:
-#     $ docker run -it --rm -v `pwd`:/work -w /work u1and0/neovim
+#    $ docker run -it --rm -v `pwd`:/work -w /work u1and0/neovim
+# Versions:
+#    v0.1.1
+#    521ee1e [rm] lynx no need
+#    v0.1.0
+#    0ce760a [add]cui browser install
+#    8cd8aa9 [add] docker neovim initial commit
 
 FROM u1and0/archlinux:v0.4.0
 
@@ -24,11 +30,11 @@ RUN echo ja_JP.UTF-8 UTF-8 > /etc/locale.gen &&\
     locale-gen && pacman -Syy
 
 # Install CUI web browser
-RUN pacman -S --noconfirm w3m lynx
+RUN pacman -S --noconfirm w3m
 
 ENTRYPOINT ["/usr/bin/nvim"]
 
 LABEL maintainer="u1and0 <e01.ando60@gmail.com>"\
       description="Neovim container. Using my dotfiles. Get plugins by dein."\
       description.ja="neovimコンテナ。自分用dotfiles適用済み、deinによるプラグイン取得済み"\
-      version="neovim:v0.1.0"
+      version="neovim:v0.1.1"
