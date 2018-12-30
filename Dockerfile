@@ -6,6 +6,7 @@
 #    $ docker run -it --rm -v `pwd`:/work -w /work u1and0/neovim [filename]
 # Versions:
 #    v0.2.1
+#    4ff1710 [add] vimproc install manually #issue#
 #    5b40293 [add] pacman -S make, for build vimproc
 #    v0.2.0
 #    a53a958 [add] ctags/gtags
