@@ -5,6 +5,8 @@
 # Usage:
 #    $ docker run -it --rm -v `pwd`:/work -w /work u1and0/neovim [filename]
 # Versions:
+#    v0.2.1
+#    5b40293 [add] pacman -S make, for build vimproc
 #    v0.2.0
 #    a53a958 [add] ctags/gtags
 #    v0.1.1
@@ -36,6 +38,9 @@ RUN pacman -S --noconfirm gcc pygmentize &&\
     make &&\
     make install &&\
     rm -rf /tmp/global-6.6.3
+
+# vimproc install ###issue### <- Does not work `make` in lazy.toml why?
+RUN nvim -c "VimProcInstall" -c "q"
 
 ENTRYPOINT ["/usr/bin/nvim"]
 
