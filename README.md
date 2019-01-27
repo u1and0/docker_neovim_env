@@ -19,6 +19,7 @@ v0.1.0           Neovim container v0.1.0
 # Description
 * Archlinux コンテナベース([u1and0/archlinux](http://hub.docker.com/r/u1and0/archlinux)
 * neovimインストール済み
+* <kbd><C-Z></kbd>によるsuspendは無効化してあるので、代わりにdockerのdetach<kbd>C-P</kbd><kbd>C-Q</kbd>を使う
 * プラグインインストール済み(詳細は[dotfiles](https://github.com/u1and0/dotfiles/tree/master/.config/dein))
 
 # Plugins
