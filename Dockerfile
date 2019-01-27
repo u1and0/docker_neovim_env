@@ -43,9 +43,10 @@ RUN pacman -S --noconfirm gcc pygmentize &&\
 # vimproc install ###issue### <- Does not work `make` in lazy.toml why?
 RUN nvim -c "VimProcInstall" -c "q"
 
-ENTRYPOINT ["/usr/bin/nvim"]
+# Disable suspend keybind <C-Z>. Use docker detach keybind <C-P><C-Q> instead.
+ENTRYPOINT ["/usr/bin/nvim", "-c","nn <C-Z> <nop>"]
 
 LABEL maintainer="u1and0 <e01.ando60@gmail.com>"\
       description="Neovim container. Using my dotfiles. Get plugins by dein. ctags/gtags installed."\
-      description.ja="neovimコンテナ。自分用dotfiles適用, deinによるプラグイン取得, ctags/gtags導入"\
-      version="neovim:v0.2.1"
+      description.ja="neovimコンテナ。u1and0/dotfiles:v1.13.3適用, deinによるプラグイン取得, ctags/gtags導入"\
+      version="neovim:v1.0.0"
