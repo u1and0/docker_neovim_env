@@ -20,10 +20,9 @@ docker run -it --rm -v `pwd`:/work -w /work u1and0/neovim
 * Archlinux コンテナベース([u1and0/archlinux](http://hub.docker.com/r/u1and0/archlinux))
 * `python-neovim` インストール済み
 * <kbd>C-Z</kbd>によるsuspendは無効化してあるので、代わりにdockerのdetach<kbd>C-P</kbd><kbd>C-Q</kbd>を使う
-* プラグインインストール済み(詳細は[dotfiles](https://github.com/u1and0/dotfiles/tree/master/.config/dein))
+* プラグインインストール済み(詳細は[u1and0/dotfiles](https://github.com/u1and0/dotfiles/tree/master/.config/dein))
 
 # Plugins
-
 1. Shougo/neomru.vim
 2. Shougo/neoyank.vim
 3. zchee/deoplete-jedi
