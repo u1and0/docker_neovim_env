@@ -1,6 +1,6 @@
-Dockerfile for [u1nd0/neovim](http://hub.docker.com/r/u1and0/neovim)
+Dockerfile for [u1and0/neovim](http://hub.docker.com/r/u1and0/neovim)
 
-[!screen](https://github.com/u1and0/docker_neovim_env/blob/u1and0-screenshot/Screenshot%20from%202019-01-27%2014-29-20.png)
+![screen](https://github.com/u1and0/docker_neovim_env/blob/u1and0-screenshot/Screenshot%20from%202019-01-27%2014-29-20.png)
 
 # Install & Run
 
@@ -10,16 +10,16 @@ docker run -it --rm -v `pwd`:/work -w /work u1and0/neovim
 ```
 
 # Version
-v1.0.0          ditfiles version v1.13.3
-v0.2.1          install vimproc
-v0.2.0          [add] ctags/gtags
-v0.1.1          [rm] lynx no need [add] comment versions info
-v0.1.0           Neovim container v0.1.0
+* v1.0.0          ditfiles version v1.13.3
+* v0.2.1          install vimproc
+* v0.2.0          [add] ctags/gtags
+* v0.1.1          [rm] lynx no need [add] comment versions info
+* v0.1.0           Neovim container v0.1.0
 
 # Description
-* Archlinux コンテナベース([u1and0/archlinux](http://hub.docker.com/r/u1and0/archlinux)
-* neovimインストール済み
-* <kbd><C-Z></kbd>によるsuspendは無効化してあるので、代わりにdockerのdetach<kbd>C-P</kbd><kbd>C-Q</kbd>を使う
+* Archlinux コンテナベース([u1and0/archlinux](http://hub.docker.com/r/u1and0/archlinux))
+* `python-neovim` インストール済み
+* <kbd>C-Z</kbd>によるsuspendは無効化してあるので、代わりにdockerのdetach<kbd>C-P</kbd><kbd>C-Q</kbd>を使う
 * プラグインインストール済み(詳細は[dotfiles](https://github.com/u1and0/dotfiles/tree/master/.config/dein))
 
 # Plugins
