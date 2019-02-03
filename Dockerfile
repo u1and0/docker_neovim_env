@@ -9,29 +9,13 @@
 FROM u1and0/archlinux:latest
 
 # Neovim install
-RUN pacman -Sy --noconfirm python-neovim make
+RUN sudo -u aur yay -Sy --noconfirm python-neovim w3m pygmentize ctags global
 # Plugins insall
 RUN nvim -c "call dein#install()" -c "q"
-# Update python plguins
-RUN nvim -c "UpdateRemotePlugins" -c "q"
-
-# Install CUI web browser
-RUN pacman -S --noconfirm w3m
-
-# Install ctags
-RUN pacman -S  --noconfirm ctags
-# Install gtags
-RUN pacman -S --noconfirm gcc pygmentize &&\
-    cd /tmp &&\
-    curl -L http://tamacom.com/global/global-6.6.3.tar.gz | tar zx &&\
-    cd ./global-6.6.3 &&\
-    ./configure &&\
-    make &&\
-    make install &&\
-    rm -rf /tmp/global-6.6.3
-
-# vimproc install ###issue### <- Does not work `make` in lazy.toml why?
-RUN nvim -c "VimProcInstall" -c "q"
+# Update plguins & vimproc
+RUN nvim +UpdateRemotePlugins +VimProcInstall +q &&\
+    : "Remove all packages cache " &&\
+    yes | yay -Scc
 
 # Disable suspend keybind <C-Z>. Use docker detach keybind <C-P><C-Q> instead.
 ENTRYPOINT ["/usr/bin/nvim", "-c","nn <C-Z> <nop>"]
