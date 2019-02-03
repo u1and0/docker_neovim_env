@@ -3,18 +3,8 @@
 # Get plugins by dein
 #
 # Usage:
+#    $ docker pull u1and0/neovim
 #    $ docker run -it --rm -v `pwd`:/work -w /work u1and0/neovim [filename]
-# Versions:
-#    v0.2.1
-#    4ff1710 [add] vimproc install manually #issue#
-#    5b40293 [add] pacman -S make, for build vimproc
-#    v0.2.0
-#    a53a958 [add] ctags/gtags
-#    v0.1.1
-#    521ee1e [rm] lynx no need
-#    v0.1.0
-#    0ce760a [add]cui browser install
-#    8cd8aa9 [add] docker neovim initial commit
 
 FROM u1and0/archlinux:latest
 
