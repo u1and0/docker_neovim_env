@@ -102,6 +102,7 @@ docker run -it --rm -v `pwd`:/work -w /work u1and0/neovim
 63. vim-airline/vim-airline-themes
 
 # Version
+* v2.1.0          [add] ripgrep `rg` for Denite search
 * v2.0.0          [mod] yay installed version
 * v1.0.1          [mod] README.md
 * v1.0.0          ditfiles version v1.13.3
