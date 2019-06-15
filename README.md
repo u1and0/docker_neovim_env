@@ -32,7 +32,6 @@ docker run -it --rm -v `pwd`:/work -w /work u1and0/neovim
     Run :checkhealth for more info
     ```
 
-* <kbd>C-Z</kbd>によるsuspendは無効化してあるので、代わりにdockerのdetach<kbd>C-P</kbd><kbd>C-Q</kbd>を使う
 * プラグインインストール済み(詳細は[u1and0/dotfiles](https://github.com/u1and0/dotfiles/tree/master/.config/dein))
 
 
@@ -102,10 +101,13 @@ docker run -it --rm -v `pwd`:/work -w /work u1and0/neovim
 63. vim-airline/vim-airline-themes
 
 # Version
-* v2.1.0          [add] ripgrep `rg` for Denite search
-* v2.0.0          [mod] yay installed version
-* v1.0.1          [mod] README.md
-* v1.0.0          ditfiles version v1.13.3
+* v2.2.1          update my dotfiles
+* v2.1.1          [add] install fzf
+* v2.1.0          [mod] release merge
+* v2.0.1          [mod] remove cache must after yay -Sy
+* v2.0.0          yay installed version
+* v1.0.1          fix README
+* v1.0.0          ditfiles version v1.13.3 applied & <C-Z> disabled
 * v0.2.1          install vimproc
 * v0.2.0          [add] ctags/gtags
 * v0.1.1          [rm] lynx no need [add] comment versions info
