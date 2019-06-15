@@ -17,9 +17,9 @@ RUN sudo -u aur yay -Sy --noconfirm python-neovim\
     : "Remove all packages cache " &&\
     yes | yay -Scc
 # Plugins insall
-RUN nvim -c "call dein#install()" -c "q"
+RUN /usr/sbin/nvim -c "call dein#install()" -c "q"
 # Update plguins & vimproc
-RUN nvim +UpdateRemotePlugins +VimProcInstall +q
+RUN /usr/sbin/nvim +UpdateRemotePlugins +VimProcInstall +q
 
 # Install other packages
 RUN yes | pacman -Syu ripgrep fzf &&\
