@@ -6,7 +6,7 @@
 #    $ docker pull u1and0/neovim
 #    $ docker run -it --rm -v `pwd`:/work -w /work u1and0/neovim nvim [filenames] ...
 
-FROM u1and0/archlinux:v3.0.0
+FROM u1and0/archlinux:latest
 
 # Neovim install
 RUN sudo -u aur yay -Syyu --noconfirm neovim\
@@ -28,4 +28,4 @@ RUN nvim +UpdateRemotePlugins +VimProcInstall +q
 
 LABEL maintainer="u1and0 <e01.ando60@gmail.com>"\
       description="OS=archlinux, neovim+zplug+tmux, u1and0/dotfiles, plugin manager = dein"\
-      version="neovim:v3.0.0"
+      version="neovim:v3.0.1"
