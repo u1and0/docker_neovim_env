@@ -101,6 +101,13 @@ docker run -it --rm -v `pwd`:/work -w /work u1and0/neovim
 63. vim-airline/vim-airline-themes
 
 # Version
+* v5.1.0          [mod] base from u1and0/archlinux v4.1.0 rebuild
+* v5.0.0          [mod] from u1and0/archlinux user u1and0
+* v4.0.0          [mod] default shell zsh, parent image u1and0/zplug
+* v3.1.0          [mod] base image u1and0/archlinux:v3.0.0
+* v3.0.1          [mod] FROM image latest
+* v3.0.0          [add] fd install zplug, tmux, pull all dotfiles
+* v2.2.2          [mod] usr /usr/sbin/nvim
 * v2.2.1          update my dotfiles
 * v2.1.1          [add] install fzf
 * v2.1.0          [mod] release merge
