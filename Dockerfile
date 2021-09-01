@@ -31,4 +31,4 @@ RUN nvim +UpdateRemotePlugins +VimProcInstall +q
 
 LABEL maintainer="u1and0 <e01.ando60@gmail.com>"\
       description="OS=archlinux, editor=neovim, dotfiles=u1and0/dotfiles, plugin manager=dein"\
-      version="neovim:v5.1.0"
+      version="neovim:v5.1.1"
