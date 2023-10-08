@@ -11,8 +11,10 @@ FROM u1and0/archlinux:latest
 
 # Neovim install
 # USER u1and0 or somebody except root
+RUN sudo pacman -Sy --noconfirm archlinux-keyring
 RUN yay -Syyu --noconfirm neovim\
                         python-neovim\
+                        vim\
                         fd\
                         fzf\
                         ripgrep\ 
@@ -31,4 +33,4 @@ RUN nvim +UpdateRemotePlugins +VimProcInstall +q
 
 LABEL maintainer="u1and0 <e01.ando60@gmail.com>"\
       description="OS=archlinux, editor=neovim, dotfiles=u1and0/dotfiles, plugin manager=dein"\
-      version="neovim:v5.1.1"
+      version="neovim:v5.1.2"
